@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("Marvel_background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+    
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    body {
+      background-image: url("Marvel_background.jpg");
+    }
+  }
