@@ -12,10 +12,10 @@ $(() => {
             
             
            }).then(
-               (Character)=>{
+               (data)=>{
                 
-                    
-                    $(".character-info").html(Character.name);
+                
+                    console.log(data)
                     // description (string, optional): A short bio or description of the character.,
                     // modified (Date, optional): The date the resource was most recently modified.,
                     // resourceURI (string, optional): The canonical URL identifier for this resource.,
@@ -27,7 +27,7 @@ $(() => {
                     // series (SeriesList, optional): A resource list of series in which this character appears.
                     }
                    
-               
+                }
            );
      })
 
