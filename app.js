@@ -17,9 +17,14 @@ $(() => {
             
            }).then(
                response => {
-                // console.log(data)
+                // console.log(response)
+                // debugger;
                    const characterData = response.data.results[0];
-                   $(".character-title").append(characterData.name);
+                   const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
+                   const $img = $("<img>").attr("src", srcpath);
+                   $("#character-title").append(characterData.name);
+                   $("#character-image").append($img)
+                   
 
                }
 
