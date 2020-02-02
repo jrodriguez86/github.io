@@ -13,7 +13,7 @@ $(() => {
             
            }).then(
                (data)=>{
-                console.log(data)
+                // console.log(data)
                    const characterData = data.results[0];
                    $(".card-title").append(characterData.name);
 
