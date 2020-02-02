@@ -27,7 +27,7 @@ $(() => {
                     // series (SeriesList, optional): A resource list of series in which this character appears.
                     }
                    
-                }
+                
            );
      })
 
