@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("marvel-design.png");
+    background-image: url("marvel-custom.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,6 +33,6 @@ h1 {
 
 @media only screen and (max-width: 767px) {
     body {
-      background-image: url("marvel-design.png");
+      background-image: url("marvel-custom.png");
     }
   }
