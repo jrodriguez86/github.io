@@ -7,14 +7,18 @@ $(() => {
          const userInput = $('input[type="text"]').val();
 
          $.ajax({
-            url: "https://gateway.marvel.com:443/v1/public/characters?apikey=cd85b6020ae0420df7a8b994940161dd" + userInput,
-            method: "GET"
+            url: "https://gateway.marvel.com:443/v1/public/characters",
+            method: "GET",
+            data: {
+                apikey: "cd85b6020ae0420df7a8b994940161dd",
+                name: userInput
+            }
             
             
            }).then(
-               (data)=>{
+               respopnse => {
                 // console.log(data)
-                   const characterData = data.results[0];
+                   const characterData = response.data.results[0];
                    $(".character-title").append(characterData.name);
 
                }
