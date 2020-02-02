@@ -16,7 +16,7 @@ $(() => {
             
             
            }).then(
-               respopnse => {
+               response => {
                 // console.log(data)
                    const characterData = response.data.results[0];
                    $(".character-title").append(characterData.name);
