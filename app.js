@@ -15,7 +15,7 @@ $(() => {
                (data)=>{
                 // console.log(data)
                    const characterData = data.results[0];
-                   $(".card-title").append(characterData.name);
+                   $(".character-title").append(characterData.name);
 
                }
 
