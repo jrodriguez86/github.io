@@ -9,12 +9,13 @@ $(() => {
     
     
     
-    
+    $(".card").hide();
     
     
     $("form").on("submit", (event) => {
+        $(".card").show();
          event.preventDefault();
-
+         
          const userInput = $('input[type="text"]').val();
 
          $.ajax({
@@ -32,10 +33,13 @@ $(() => {
                 // debugger;
                    const characterData = response.data.results[0];
                    const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
-                   const $img = $(".character-image").attr("src", srcpath);
-                   $(".card").append($img);
-                   $(".character-name").append(characterData.name);
-                   $(".character-description").append(characterData.description);
+                   const $img = $("<img>").addClass(".card-image-top");
+                   $img.attr("src", srcpath);
+
+                   $(".card").prepend($img);
+                   
+                   $(".card-title").append(characterData.name);
+                   $(".card-text").append(characterData.description);
                    $("#comics").append(characterData.comic.items.name);
 
                    

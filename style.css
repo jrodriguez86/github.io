@@ -40,7 +40,7 @@ h1 {
 form {
     width: 400px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 input[type=text] {
@@ -61,29 +61,24 @@ input[type=text], input[type=submit] {
 
 
 
-.wrap {
-    display: flex;
-    justify-content: center;
-    width: 1000px;
-    margin: auto;
-    margin-top: 100px;
-}
+
 
 .card {
+    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
     transition: 0.4s;
-    width: 300px;
     text-align: center;
     float: left;
     margin: 10px;
     background-color: white;
     border: 6px solid black;
+    width: 50%;
     
 
 }
 
 .character-image {
-    width: 280px;
+    width: 288px;
 }
 
 h5, .character-name {
