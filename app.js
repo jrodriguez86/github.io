@@ -18,7 +18,7 @@ $(() => {
            }).then(
                response => {
                 // console.log(response)
-                // debugger;
+                debugger;
                    const characterData = response.data.results[0];
                    const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
                    const $img = $(".character-image").attr("src", srcpath);
