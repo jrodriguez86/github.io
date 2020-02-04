@@ -1,7 +1,18 @@
 console.log("it works!")
 
 $(() => {
-     $("form").on("submit", (event) => {
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    $("form").on("submit", (event) => {
          event.preventDefault();
 
          const userInput = $('input[type="text"]').val();
