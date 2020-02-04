@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,7 +10,12 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+    
+  
   <link rel="stylesheet" href="style.css">
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+      </style>
 
 </head>
 <body>
@@ -24,30 +30,21 @@
       <input type="submit" value="Character Info" />
     </form>
   
-  <div class="slide-container">
-    <div class="image-container">
+  
+     <div class="wrap">
 
+    <div class="card">
+      <img class="character-image">
+      <div class="container">
+      <h5 class="character-name"></h5>
+      <p class="character-description"></p>
     </div>
-  </div>
-     
-  <div class="card" style="width: 18rem;">
-      
-      <div class="card-body">
-        <div id="character-title">
-            
-        </div>
-        <div id="character-image">
-          
-        </div>
-          
-        
-        
-        <div id="character-description"></div>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-      </div>
+     </div>
+
+ 
     </div>
          <div id="comics">
-           <ul></ul>
+           
          </div>
        </div>
   
@@ -58,6 +55,7 @@
 src="https://www.youtube.com/embed/mN_e5-fcGU4?controls=0">
 </iframe>-->
     
+
 
 
     <script src="app.js"></script>

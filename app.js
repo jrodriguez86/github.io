@@ -21,9 +21,12 @@ $(() => {
                 // debugger;
                    const characterData = response.data.results[0];
                    const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
-                   const $img = $("<img>").attr("src", srcpath);
-                   $("#character-title").append(characterData.name);
-                   $("#character-image").append($img)
+                   const $img = $(".character-image").attr("src", srcpath);
+                   $(".card").append($img);
+                   $(".character-name").append(characterData.name);
+                   $(".character-description").append(characterData.description);
+                   $("#comics").append(characterData.comic.items.name);
+
                    
 
                }

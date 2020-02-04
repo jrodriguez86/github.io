@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -23,12 +25,55 @@ nav {
     margin: 0;
     background-color: black;
     justify-content: center;
+    
 }
 
 h1 {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    transition: 0.4s;
+    width: 300px;
+    text-align: center;
+    float: left;
+    margin: 10px;
+    background-color: white;
+    border: 6px solid black;
+    
+
+}
+
+.character-image {
+    width: 280px;
+}
+
+h5, .character-name {
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 2px;
+}
+
+p, .character-description {
+    font-family: 'Lato', sans-serif;
+    padding: 2px;
+}
+
+
+
+
+
+
 
 
 
