@@ -1,20 +1,32 @@
 console.log("it works!")
 
+
+
+
+
+
+
 $(() => {
      
     
+    $('.carousel').carousel({
+        interval: 6000,
+        pause: "hover"
+      })
     
     
     
     
-    
-    
+    // Hide div from screen
     $(".card").hide();
     
     
     $("form").on("submit", (event) => {
         $(".card").show();
          event.preventDefault();
+        //  if ($(".card").children()) {
+        //     $(".card").empty();
+        //  }
          
          const userInput = $('input[type="text"]').val();
 
@@ -31,48 +43,31 @@ $(() => {
                response => {
                 // console.log(response)
                 // debugger;
+                if ($(".card").children()) {
+                    $(".card").empty();
+                 }
                    const characterData = response.data.results[0];
                    const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
-                   const $img = $("<img>").addClass(".card-image-top");
-                   $img.attr("src", srcpath);
-
+                   const $img = $("<img>").attr("src", srcpath);
+                   const $title = $("<h5>").text(characterData.name);
+                   const $text = $("<p>").text(characterData.description);
+                   const $cardBody = $("<div>").addClass(".card-body");
                    $(".card").prepend($img);
-                   
-                   $(".card-title").append(characterData.name);
-                   $(".card-text").append(characterData.description);
-                   $("#comics").append(characterData.comic.items.name);
-
+                   $(".card").append($cardBody);
+                   $cardBody.append($title);
+                   $cardBody.append($text);
                    
 
-               }
-
-                
-
-                
-
-
-                // $('.card-body').append(characterData);
-
-
-                
-                    // console.log(data)
-                    // description (string, optional): A short bio or description of the character.,
-                    // modified (Date, optional): The date the resource was most recently modified.,
-                    // resourceURI (string, optional): The canonical URL identifier for this resource.,
-                    // urls (Array[Url], optional): A set of public web site URLs for the resource.,
-                    // thumbnail (Image, optional): The representative image for this character.,
-                    // comics (ComicList, optional): A resource list containing comics which feature this character.,
-                    // stories (StoryList, optional): A resource list of stories in which this character appears.,
-                    // events (EventList, optional): A resource list of events in which this character appears.,
-                    // series (SeriesList, optional): A resource list of series in which this character appears.
+                   } 
+                   
+               );
+       $("form")[0].reset();
+                })
            
-                   
-                
-           );
-     })
+           
+     });
 
 
 
 
-
-})
+    
