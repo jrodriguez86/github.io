@@ -48,7 +48,7 @@ $(() => {
                  }
                    const characterData = response.data.results[0];
                    const srcpath = response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension;
-                   const $img = $("<img>").attr("src", srcpath);
+                   const $img = $("<img>").attr("src", srcpath).addClass(".img-responsive");
                    const $title = $("<h5>").text(characterData.name);
                    const $text = $("<p>").text(characterData.description);
                    const $cardBody = $("<div>").addClass(".card-body");
