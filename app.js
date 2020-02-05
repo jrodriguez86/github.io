@@ -53,7 +53,7 @@ $(() => {
                    const $text = $("<p>").text(characterData.description);
                    const $cardBody = $("<div>").addClass(".card-body");
                    const $comicButton = $("<a>").attr("href", "#").addClass("btn btn-primary").text("Get Comics");
-                   $(".card").prepend($img);
+                   $(".card").append($img);
                    $(".card").append($cardBody);
                    $cardBody.append($title);
                    $cardBody.append($text);
