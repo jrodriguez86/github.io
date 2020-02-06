@@ -89,13 +89,13 @@ input[type=text], input[type=submit] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
     transition: 0.4s;
     text-align: center;
-    margin: 10px;
+    margin: 0 auto;
     background-color: white;
     border: 6px solid black;
-    padding: 10px 10px 30px 10px;
+    padding: 5px 10px 30px 10px;
     height: 300px;
     display: none;
-    width: 10vw;
+    width: 600px;
     
     
 }
@@ -128,6 +128,14 @@ h5, .character-name {
 p, .character-description {
     font-family: 'Lato', sans-serif;
     padding: 2px;
+}
+
+.comic-section {
+    background-image: url("los-vengadores-vinilo-decorativo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
